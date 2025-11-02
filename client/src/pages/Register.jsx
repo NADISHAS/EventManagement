@@ -24,24 +24,28 @@ export default function Register() {
   }
 
   return (
-    <div className="container">
-      <h2>Register</h2>
-      <form onSubmit={submit}>
-        <div>
-          <label>Name</label>
-          <input value={name} onChange={e=>setName(e.target.value)} />
-        </div>
-        <div>
-          <label>Email</label>
-          <input value={email} onChange={e=>setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="auth-page">
+      <div className="container auth-container">
+        <h2>Register</h2>
+        <form onSubmit={submit} className="auth-form">
+          <div className="field">
+            <label>Name</label>
+            <input value={name} onChange={e=>setName(e.target.value)} />
+          </div>
+          <div className="field">
+            <label>Email</label>
+            <input value={email} onChange={e=>setEmail(e.target.value)} />
+          </div>
+          <div className="field">
+            <label>Password</label>
+            <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
+          </div>
+          <div className="form-actions-center">
+            <button type="submit" className="btn-primary">Register</button>
+          </div>
+        </form>
+        {msg && <p className="auth-msg">{msg}</p>}
+      </div>
     </div>
   )
 }
