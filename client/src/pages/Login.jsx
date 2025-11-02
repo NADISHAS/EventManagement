@@ -24,20 +24,24 @@ export default function Login() {
   }
 
   return (
-    <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={submit}>
-        <div>
-          <label>Email</label>
-          <input value={email} onChange={e=>setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      {msg && <p>{msg}</p>}
+    <div className="auth-page">
+      <div className="container auth-container">
+        <h2>Login</h2>
+        <form onSubmit={submit} className="auth-form">
+          <div className="field">
+            <label>Email</label>
+            <input value={email} onChange={e=>setEmail(e.target.value)} />
+          </div>
+          <div className="field">
+            <label>Password</label>
+            <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
+          </div>
+          <div className="form-actions-center">
+            <button type="submit" className="btn-primary">Login</button>
+          </div>
+        </form>
+        {msg && <p className="auth-msg">{msg}</p>}
+      </div>
     </div>
   )
 }

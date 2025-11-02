@@ -84,5 +84,15 @@ h2{margin-top:0}
 .search-bar input{padding:8px;border-radius:8px;border:1px solid #eee;width:260px}
 .search-bar select{padding:8px;border-radius:8px;border:1px solid #eee}
 
+/* auth (login/register) centering */
+.auth-page{display:flex;align-items:center;justify-content:center;padding:24px}
+.auth-page .auth-container{max-width:640px;width:100%;}
+.auth-form{background:transparent;padding:12px}
+.auth-form .field{margin-bottom:12px}
+.auth-form label{display:block;margin-bottom:6px;font-weight:600}
+.auth-form input{width:100%;padding:8px;border:1px solid #e6e9ff;border-radius:6px}
+.form-actions-center{display:flex;justify-content:center;margin-top:8px}
+.auth-msg{color:var(--muted);text-align:center;margin-top:10px}
+
 
 
